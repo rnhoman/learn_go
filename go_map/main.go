@@ -29,6 +29,28 @@ func main() {
 	fmt.Println(myMap["Ruby"])
 	fmt.Println(myMap)
 
-	myMap2 := map[string]string{"Go": "is the best fast", "Ruby": "is the best language"}
+	myMap2 := map[string]string{
+		"Go": "is the best fast", 
+		"Ruby": "is the best language",
+		"JavaScript": "is in language web",
+	}
 	fmt.Println(myMap2)
+
+	for index, console := range myMap2 {
+		fmt.Println("index : ", index, " value : ", console)
+	}
+
+	fmt.Println("==============")
+
+	delete(myMap2, "Go")
+
+	for key, value :=range myMap2 {
+		fmt.Println("Key : ", key, " value : ", value)
+	}
+
+	fmt.Println("===============")
+	value, isAvaibel := myMap2["phyton"]
+
+	fmt.Println(isAvaibel)
+	fmt.Println(value)
 }
